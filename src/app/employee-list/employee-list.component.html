@@ -1,0 +1,46 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Employee Id</th>
+      <th>Employee Name</th>
+      <th>Address</th>
+      <th>Contact Number</th>
+      <th>Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeeList">
+      <td>{{ employee.empId }}</td>
+      <td>{{ employee.empName }}</td>
+      <td>{{ employee.address }}</td>
+      <td>{{ employee.contactNumber }}</td>
+      <td>{{ employee.empSalary }}</td>
+      <td>
+        <button
+          type="submit"
+          (click)="goToUpdateEmployee(employee.empId)"
+          class="btn btn-success"
+        >
+          Update
+        </button>
+        <button
+          type="submit"
+          (click)="deleteEmployeeDetails(employee.empId)"
+          class="btn btn-danger"
+          style="margin-left: 10px"
+        >
+          Delete
+        </button>
+        <button
+          type="submit"
+          (click)="viewEmployeeDetails(employee.empId)"
+          class="btn btn-primary"
+          style="margin-left: 10px"
+        >
+          View
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

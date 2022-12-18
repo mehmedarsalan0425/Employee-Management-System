@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap\dist\css\bootstrap.min.css";
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: tan;
+}
+
+.container-fluid{
+    background-color: bisque;
+}
+
+table, th, td {
+    border: 1px solid black;
+    
+  }
